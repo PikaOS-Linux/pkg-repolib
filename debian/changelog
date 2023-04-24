@@ -1,3 +1,10 @@
+repolib (2.2.0~99pika4-lunar) kinetic; urgency=medium
+
+  * Rebuild against lunar
+
+ -- Ward Nakchbandi <hotrod.master@hotmail.com>  Fri, 09 Oct 2022 21:38:00 +0300
+
+
 repolib (2.2.0~99pika4) kinetic; urgency=medium
 
   * Initial Creation
