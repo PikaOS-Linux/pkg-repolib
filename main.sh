@@ -4,16 +4,19 @@ add-apt-repository https://ppa.pika-os.com
 add-apt-repository ppa:pikaos/pika
 add-apt-repository ppa:kubuntu-ppa/backports
 # Clone Upstream
-git clone https://github.com/pop-os/repolib
-rm -rvf ./repolib/debian
-cp -rvf ./debian ./repolib
+### WTF ###
+#git clone https://github.com/pop-os/repolib
+#rm -rvf ./repolib/debian
+### WTF ###
+cp -rvf ./python3-repolib.install ./debian/
+cp -rvf ./debian ./repolib/
 cd ./repolib
 
 # Get build deps
 apt-get build-dep ./ -y
 
 # Build package
-dpkg-buildpackage
+dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../

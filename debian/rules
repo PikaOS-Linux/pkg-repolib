@@ -1,14 +1,16 @@
 #!/usr/bin/make -f
+
+### WTF ###
 # See debhelper(7) (uncomment to enable)
 # output every command that modifies files on the build system.
 #export DH_VERBOSE = 1
-
-export PYBUILD_NAME=repolib
-export PYBUILD_OPTION=--test-pytest
-
-%:
-	dh $@ --with python3 --buildsystem=pybuild
-
+#
+#export PYBUILD_NAME=repolib
+#export PYBUILD_OPTION=--test-pytest
+#
+#%:
+#	dh $@ --with python3 --buildsystem=pybuild
+#
 ## Uncomment to disable testing during package builds
 ## NOTE for QA or Engineering Review: This should not be uncommented in a
 ## PR. If it is, DO NOT APPROVE THE PR!!!
@@ -21,4 +23,7 @@ export PYBUILD_OPTION=--test-pytest
 #	dh_auto_build
 #	PYTHONPATH=. http_proxy='127.0.0.1:9' sphinx-build -N -bhtml        docs/ build/html # HTML generator
 #	PYTHONPATH=. http_proxy='127.0.0.1:9' sphinx-build -N -bman        docs/ build/man # Manpage generator
+### WTF ###
 
+%:
+	dh $@
